@@ -27,19 +27,88 @@ model = YOLO("<다운로드할 모델의 버전>")
 
 ---
 # 2. 모델 학습하기
-## 2.0. 구조
+## 2.0. 대략적인 과정
+1. 데이터셋을 구조에 맞게 설정한다.
+2. 학습시킨다.
 
 
+## 2.1. 데이터셋 설정
+파일 구조는 다음과 같이 설정해야 한다.
+<details>
+<summary>파일 구조 접기/펼치기</summary>
 
-## 2.1. YOLO.train()
+dataset/
+├── train/
+│   ├── images/
+│   │   ├── image1.jpg
+│   │   ├── image2.jpg
+│   │   └── ...
+│   └── labels/
+│       ├── image1.txt
+│       ├── image2.txt
+│       └── ...
+├── val/
+│   ├── images/
+│   │   ├── image101.jpg
+│   │   └── ...
+│   └── labels/
+│       ├── image101.txt
+│       └── ...
+└── data.yaml
+</details>
+
+이후 구조에 대한 설명을 `data.yaml`을 통해 모델에 전달한다.
+
+
+### 2.1.1. image.jpg
+학습에 사용할 사진이 저장된다.
+이때 사진 안에는 여러 개의 물체가 있어도 된다.
+각각의 물체를 txt 파일에서 개별적으로 등록해주는 절차를 거치게 된다.
+
+### 2.1.2. image.txt
+image.jpg에 존재하는 물체들의 class와 위치를 지정한다.
+한 줄에 한 object에 대한 정보를 적게 되며 형식은 다음과 같다.
+`<class_id> <x_center> <y_center> <width> <height>`
+
+### 2.1.3. data.yaml
+v5 에서는 아래와 같은 구조를 따른다.
+```v5
+train: ../train/images
+val: ../val/images
+
+nc: 3
+names: ['cat', 'dog', 'rabbit']
+
+```
+
+그러나 v8 즈음부터는 위 형식도 지원 하나 아래 형식도 사용 가능하다.
+```
+train: ../train/images
+val: ../val/images
+
+names:
+  0: cat
+  1: dog
+  2: rabbit
+```
+
+>[참고] ..은 상위 디렉토리를 의미한다.
+>[참고] .은 현재 디렉토리를 의미한다.
+
+### 2.1.4. dataset 만들기
+이 [링크](https://toby2718.com/labelimg/)에 편하게 dataset을 제작할 수 있는 프로그램이 소개되어 있다.
+
+
+## 2.2. YOLO.train()
 YOLO 모델을 학습 시킬 때는 train 메소드를 이용한다.
-이때 메소드의 인수는 아래와 같다
+우리는 이 중 주요한 몇 가지 인수만 확인하겠다.
 
+>참고
 <details>
 <summary>전체 인수 목록 접기/펼치기</summary>
 
 <br>
-
+출처 : [ultralytics](https://docs.ultralytics.com/ko/modes/train/#what-are-the-common-training-settings-and-how-do-i-configure-them)
 |인수|유형|기본값|설명|
 |---|---|---|---|
 |`model`|`str`|`None`|학습할 모델 파일을 지정합니다. 다음 중 하나의 경로를 허용합니다. `.pt` 사전 학습된 모델 또는 `.yaml` 구성 파일. 모델 구조를 정의하거나 가중치를 초기화하는 데 필수적입니다.|
@@ -93,4 +162,26 @@ YOLO 모델을 학습 시킬 때는 train 메소드를 이용한다.
 
 </details>
 
-이 중 중요한 인수 몇 개만 보자면
+### 2.2.1. data : str
+학습할 데이터의 구조를 `.yaml` 형식의 파일로 전달한다
+yaml 파일의 구조는 추후 설명한다.
+
+### 2.2.2. epoch : int
+데이터 전체를 몇 번 학습 시킬 지 전달한다
+
+>**[참고] epoch, batch size, iteration의 차이**
+>epoch : 전체 데이터셋을 몇번 학습시킬 것인가
+>batch size : batch 한번에 얼마만큼의 데이터를 학습할 것인가
+>iteration : 1번의 epoch에 실행되는 batch의 수이다
+>
+>ex) 만약 100명이 본 국어, 수학, 영어 시험의 답안지를 채점한다고 해보자
+>이때 한 번 채점할 때 한 사람의 국어, 수학, 영어 시험지를 채점한다면 **batch size는 3**
+>이걸 100번 해야 전체 인원을 1번 채점하므로 **iteration은 100**
+>이때 10번 채점 및 검토를 한다면 최초 채점이 1 epoch, 100 iteration이고
+>한번 검토하면 2 epoch, 200 iteration이다.
+
+### 2.2.3. patience : int
+성능 개선이 없어도 기다리는 epoch의 수이다.
+early stop을 위해 존재한다.
+
+---
