@@ -169,21 +169,15 @@ yaml 파일의 구조는 추후 설명한다.
 ### 2.2.2. epoch : int
 데이터 전체를 몇 번 학습 시킬 지 전달한다
 
->**[참고] epoch, batch size, iteration의 차이**
->epoch : 전체 데이터셋을 몇번 학습시킬 것인가
+>**[참고] epoch, batch size, iteration의 차이**<br>
+>epoch : 전체 데이터셋을 몇번 학습시킬 것인가<br>
+>batch size : batch 한번에 얼마만큼의 데이터를 학습할 것인가<br>
+>iteration : 1번의 epoch에 실행되는 batch의 수이다<br>
 >
->batch size : batch 한번에 얼마만큼의 데이터를 학습할 것인가
->
->iteration : 1번의 epoch에 실행되는 batch의 수이다
->
->ex) 만약 100명이 본 국어, 수학, 영어 시험의 답안지를 채점한다고 해보자
->
->이때 한 번 채점할 때 한 사람의 국어, 수학, 영어 시험지를 채점한다면 **batch size는 3**
->
->이걸 100번 해야 전체 인원을 1번 채점하므로 **iteration은 100**
->
->이때 10번 채점 및 검토를 한다면 최초 채점이 1 epoch, 100 iteration이고
->
+>ex) 만약 100명이 본 국어, 수학, 영어 시험의 답안지를 채점한다고 해보자<br>
+>이때 한 번 채점할 때 한 사람의 국어, 수학, 영어 시험지를 채점한다면 **batch size는 3**<br>
+>이걸 100번 해야 전체 인원을 1번 채점하므로 **iteration은 100**<br>
+>이때 10번 채점 및 검토를 한다면 최초 채점이 1 epoch, 100 iteration이고<br>
 >한번 검토하면 2 epoch, 200 iteration이다.
 
 ### 2.2.3. patience : int
