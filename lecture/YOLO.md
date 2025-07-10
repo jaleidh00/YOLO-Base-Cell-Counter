@@ -67,7 +67,7 @@ dataset/<br>
 
 ### 2.1.2. image.txt
 image.jpg에 존재하는 물체들의 class와 위치를 지정한다.<br>
-한 줄에 한 object에 대한 정보를 적게 되며 형식은 다음과 같다.
+한 줄에 한 object에 대한 정보를 적게 되며 형식은 다음과 같다.<br>
 `<class_id> <x_center> <y_center> <width> <height>`
 
 ### 2.1.3. data.yaml
