@@ -37,23 +37,23 @@ model = YOLO("<다운로드할 모델의 버전>")
 <details>
 <summary>파일 구조 접기/펼치기</summary>
 
-dataset/
-├── train/
-│   ├── images/
-│   │   ├── image1.jpg
-│   │   ├── image2.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── image1.txt
-│       ├── image2.txt
-│       └── ...
-├── val/
-│   ├── images/
-│   │   ├── image101.jpg
-│   │   └── ...
-│   └── labels/
-│       ├── image101.txt
-│       └── ...
+dataset/<br>
+├── train/<br>
+│   ├── images/<br>
+│   │   ├── image1.jpg<br>
+│   │   ├── image2.jpg<br>
+│   │   └── ...<br>
+│   └── labels/<br>
+│       ├── image1.txt<br>
+│       ├── image2.txt<br>
+│       └── ...<br>
+├── val/<br>
+│   ├── images/<br>
+│   │   ├── image101.jpg<br>
+│   │   └── ...<br>
+│   └── labels/<br>
+│       ├── image101.txt<br>
+│       └── ...<br>
 └── data.yaml
 </details>
 
