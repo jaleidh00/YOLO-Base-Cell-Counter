@@ -107,8 +107,8 @@ YOLO 모델을 학습 시킬 때는 train 메소드를 이용한다.
 <details>
 <summary>전체 인수 목록 접기/펼치기</summary>
 
-<br>
 출처 : [ultralytics](https://docs.ultralytics.com/ko/modes/train/#what-are-the-common-training-settings-and-how-do-i-configure-them)
+<br>
 |인수|유형|기본값|설명|
 |---|---|---|---|
 |`model`|`str`|`None`|학습할 모델 파일을 지정합니다. 다음 중 하나의 경로를 허용합니다. `.pt` 사전 학습된 모델 또는 `.yaml` 구성 파일. 모델 구조를 정의하거나 가중치를 초기화하는 데 필수적입니다.|
