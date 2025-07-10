@@ -1,0 +1,185 @@
+{
+  "main": {
+    "id": "632d30bb1bbff2ba",
+    "type": "split",
+    "children": [
+      {
+        "id": "3b1e94149fe02873",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1320b21c81bc459b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "lecture/YOLO.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "YOLO"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "7b09c45ba6fe8dcb",
+    "type": "split",
+    "children": [
+      {
+        "id": "6394a89d14282ec6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "6f7eb25974438dfd",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "파일 탐색기"
+            }
+          },
+          {
+            "id": "c7ba69be8cdbb3ad",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "검색"
+            }
+          },
+          {
+            "id": "d6d997706183ed53",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "북마크"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "d5f285128416fbec",
+    "type": "split",
+    "children": [
+      {
+        "id": "02f8e99525a4c527",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "9ac7a11547152a2b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "lecture/YOLO.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "YOLO 의 백링크"
+            }
+          },
+          {
+            "id": "2ddc2ed192e435c4",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "lecture/YOLO.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "YOLO 의 나가는 링크"
+            }
+          },
+          {
+            "id": "7f4b7597c7c26317",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "태그"
+            }
+          },
+          {
+            "id": "994379f2fb8ba85a",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "lecture/YOLO.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "YOLO 의 개요"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:빠른 전환기 열기": false,
+      "graph:그래프 뷰 열기": false,
+      "canvas:새 캔버스 만들기": false,
+      "daily-notes:오늘의 일일 노트 열기": false,
+      "templates:템플릿 삽입": false,
+      "command-palette:명령어 팔레트 열기": false
+    }
+  },
+  "active": "1320b21c81bc459b",
+  "lastOpenFiles": [
+    "lecture/images/yolo_model_version.png",
+    "무제.md",
+    "lecture/images",
+    "lecture/YOLO.md",
+    "lecture",
+    "새 폴더",
+    "images/lifecycle.png",
+    "images/yolo_model_version.png",
+    "images/git_structrue.png",
+    "images",
+    "YOLO.md"
+  ]
+}
