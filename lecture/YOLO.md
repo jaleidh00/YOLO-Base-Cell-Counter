@@ -75,8 +75,8 @@ image.jpg에 존재하는 물체들의 class와 위치를 지정한다.<br>
 ### 2.1.3. data.yaml
 v5 에서는 아래와 같은 구조를 따른다.
 ```v5
-train: ../train/images
-val: ../val/images
+train: ./train/images
+val: ./val/images
 
 nc: 3
 names: ['cat', 'dog', 'rabbit']

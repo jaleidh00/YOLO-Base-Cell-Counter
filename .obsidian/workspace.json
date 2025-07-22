@@ -170,8 +170,11 @@
   },
   "active": "1320b21c81bc459b",
   "lastOpenFiles": [
-    "lecture/images/yolo_model_version.png",
+    "2025-07-14.md",
     "lecture/YOLO.md",
+    "model/yolo11s.pt",
+    "model",
+    "lecture/images/yolo_model_version.png",
     "README.md",
     "무제.md",
     "lecture/images",
