@@ -137,3 +137,5 @@ keyboard.add_hotkey("F6", run_yolo)
 
 refresh_window_list()
 root.mainloop()
+
+# app
